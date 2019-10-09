@@ -19,9 +19,9 @@ public class ProxyServer {
 
 	public static void start(int port){
 		System.setProperty("http.proxyHost", "127.0.0.1");
-		System.setProperty("http.proxyPort", String.valueOf(8080));
+		System.setProperty("http.proxyPort", String.valueOf(port));
 		System.setProperty("https.proxyHost", "127.0.0.1");
-		System.setProperty("https.proxyPort", String.valueOf(8080));
+		System.setProperty("https.proxyPort", String.valueOf(port));
 		httpNewServer = new HttpNewServer(port);
 		httpNewServer.setClientToRemoteListener(s -> {
 			Platform.runLater(() -> {

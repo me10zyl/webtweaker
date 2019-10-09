@@ -5,19 +5,45 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.web.*?>
 
-<Pane prefHeight="400.0" prefWidth="1174.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <TextField id="input" layoutX="21.0" layoutY="14.0" prefHeight="27.0" prefWidth="508.0" />
-            <Button id="browse" layoutX="540.0" layoutY="14.0" mnemonicParsing="false" text="浏览" />
-            <WebView id="main" layoutX="21.0" layoutY="52.0" prefHeight="314.0" prefWidth="564.0" />
-         </children>
-      </Pane>
-      <Pane layoutX="600.0" layoutY="14.0" prefHeight="374.0" prefWidth="564.0">
-         <children>
-            <Accordion id="requests" />
-         </children>
-      </Pane>
+      <TabPane prefHeight="400.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="API">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <Pane prefHeight="368.0" prefWidth="1000.0">
+                           <children>
+                              <TextField layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="908.0" />
+                              <TextArea layoutX="16.0" layoutY="49.0" prefHeight="293.0" prefWidth="905.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="SNIFF">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+                           <children>
+                              <TextField id="input" layoutX="21.0" layoutY="14.0" prefHeight="27.0" prefWidth="508.0" />
+                              <Button id="browse" layoutX="540.0" layoutY="14.0" mnemonicParsing="false" text="浏览" />
+                              <WebView id="main" layoutX="21.0" layoutY="52.0" prefHeight="314.0" prefWidth="564.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="598.0" prefHeight="361.0" prefWidth="396.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="598.0" AnchorPane.rightAnchor="6.0">
+                           <children>
+                              <Accordion id="requests" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </Pane>
