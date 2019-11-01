@@ -24,7 +24,7 @@ public class MainController extends AbstractController {
 		this.main = (WebView) find("main");
 		this.requests = (Accordion) find("requests");
 
-		input.setText("http://nicotine.vip");
+		input.setText("http://www.baidu.com");
 
 		final WebEngine engine = main.getEngine();
 		this.browse.setOnAction(e->{
