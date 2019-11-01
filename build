@@ -1,0 +1,2 @@
+cat exestub.sh target/*.jar > myrunnable
+chmod +x myrunnable
