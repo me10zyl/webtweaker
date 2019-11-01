@@ -18,6 +18,8 @@ import javafx.util.StringConverter;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class APIController implements Initializable {
 
@@ -35,7 +37,6 @@ public class APIController implements Initializable {
 	private TextField params;
 
 	private StringProperty headers = new SimpleStringProperty();
-
 
 	@FXML
 	private void send(){

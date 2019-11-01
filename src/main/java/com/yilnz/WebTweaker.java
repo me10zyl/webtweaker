@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
 
 public class WebTweaker extends Application {
 
@@ -18,7 +19,8 @@ public class WebTweaker extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			final Parent main = FXMLLoader.load(this.getClass().getResource("/fxml/main.fxml"));
+			final FXMLLoader fxmlLoader = new FXMLLoader();
+			final Parent main = fxmlLoader.load(this.getClass().getResource("/fxml/main.fxml").openStream());
 			final Scene scene = new Scene(main);
 			primaryStage.setScene(scene);
 			primaryStage.show();
